@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') %>
 <div class="row">
-  <h1 class="text-center">Edit Campground</h1>
+  <h1 class="text-center text-decoration-underline">Edit Campground</h1>
   <div class="col-md-6 offset-md-3">
     <form
       action="/campgrounds/<%= campground._id %>?_method=PUT"
@@ -10,7 +10,7 @@
       enctype="multipart/form-data"
     >
       <div class="mb-3">
-        <label class="form-label" for="title">Title</label>
+        <label class="form-label fs-5 fw-bold" for="title">Title</label>
         <input
           class="form-control"
           type="text"
@@ -22,7 +22,7 @@
         <div class="valid-feedback">Looks good!</div>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="location">Location</label>
+        <label class="form-label fs-5 fw-bold" for="location">Location</label>
         <input
           class="form-control"
           type="text"
@@ -34,7 +34,9 @@
         <div class="valid-feedback">Looks good!</div>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="price">Campground Price</label>
+        <label class="form-label fs-5 fw-bold" for="price"
+          >Campground Price</label
+        >
         <div class="input-group">
           <span class="input-group-text" id="price-label">$</span>
           <input
@@ -52,7 +54,9 @@
         </div>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="description">Description</label>
+        <label class="form-label fs-5 fw-bold" for="description"
+          >Description</label
+        >
         <textarea
           class="form-control"
           type="text"
@@ -65,7 +69,9 @@
         <div class="valid-feedback">Looks good!</div>
       </div>
       <div class="mb-3">
-        <label for="image" class="form-label">Add More Image(s)</label>
+        <label for="image" class="form-label fs-5 fw-bold"
+          >Add More Image(s)</label
+        >
         <input
           class="form-control"
           type="file"
@@ -94,6 +100,8 @@
       </div>
     </form>
 
-    <a href="/campgrounds/<%= campground._id %>">Back to Campground</a>
+    <a href="/campgrounds/<%= campground._id %>" class="btn btn-secondary mb-5"
+      >Back to Campground</a
+    >
   </div>
 </div>
